@@ -1,0 +1,17 @@
+@charset "utf-8"
+/*
+Author: Rebecca Skibo
+File: styles.css
+Date: 8.28.19
+Assignment: Pretty About You
+*/
+body{
+  font-family: Verdana, Geneva, sans-serif;
+  margin: 50px 0px 40px 0px;
+  background-color:rgb(50, 102, 205, 0.7);
+  color: #084dbd;
+  
+  width:95%;
+  height: 95%;
+  
+}
