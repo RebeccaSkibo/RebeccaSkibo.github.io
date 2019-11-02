@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+	<!-- 
+		Dev: Rebecca A. Skibo
+		File: packingtips.html
+		Date: 10/09/19
+		assignment: Responsive Travel Site Midterm Project
+    semester: Fall 2019
+	-->
+	<title>Skibo Travel</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css" media="all" />
+	<link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/print.css" media="print" />
+  </head>
+  <body>
+  
+    <div class="container">
+	
+      <header>
+        <h1>Skibo Travel</h1>
+			<div class="navbar">
+			  <div class="dropdown">
+				  <button class="dropbtn" onclick="myFunction()">Packing For Your Trip
+					<i class="fa fa-caret-down"></i>
+				  </button>
+				  <div class="dropdown-content" id="dropdown">
+					<a href="packingtips.html"> What to pack for your trip </a>
+					<a href="https://www.nycgo.com/plan-your-trip/basic-information">About New York</a>
+					<a href="https://www.chicago.gov/city/en/about.html">About Chicago</a>
+					<a href="https://www.discoverlosangeles.com/media/facts-about-la">About Los Angeles</a>
+				  </div>
+				</div>
+			</div>
+			<a href="About.html"> About us</a>
+			<a href="index.html">Home</a>
+			
+			<div class="navbarBurger">
+              <i class="fas fa-bars fa-2x" onclick="myXFunction()"></i>
+              <div class="navbarBurger-content" id="navbarBurger" >
+               <a href="https://www.nycgo.com/plan-your-trip/basic-information">About New York</a>
+					<a href="https://www.chicago.gov/city/en/about.html">About Chicago</a>
+					<a href="https://www.discoverlosangeles.com/media/facts-about-la">About Los Angeles</a>
+              </div>
+            </div>
+	
+	  <script>
+		/* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+		function myFunction() {
+		  document.getElementById("dropdown").classList.toggle("show");
+		}
+
+		// Close the dropdown if the user clicks outside of it
+		window.onclick = function(e) {
+		  if (!e.target.matches('.dropbtn')) {
+		  var dropdown = document.getElementById("dropdown");
+			if (dropdown.classList.contains('show')) {
+			  dropdown.classList.remove('show');
+			}
+		  }
+		}
+		
+		/*Hamburger, toggle between hiding and showing the dropdown content*/
+		function myXFunction() {
+		  document.getElementById("navbarBurger").classList.toggle("showX");
+		}
+		
+		window.onclick = function(event){
+		  if(!event.target.matches('.fas fa-bars fa-2x')){
+			var dropdowns = document.getElementsById("navbarBurger");
+			var i;
+			for(i = 0; i < dropdowns.length; i++){
+				var openDropdown = dropdowns[i];
+				if(openDropdown.classList.contains('showX')){
+				  openDropdown.classList.remove('showX');
+				}
+			}
+		  }
+		}
+	  </script>
+	</header>
+	  
+      <div class="cols clearfix">
+
+        <!-- Column 1 -->
+        <section class="col1">
+          <img class="img1" src="images/NewYork1.jpg" alt="A New York Picture"/>
+          <h2>Packing for New York</h2>
+          <p>New York can be very cold during the fall and winter months, so it is a good idea to pack warm clothes, and always pack extras! Here are things that would be a good idea to pack for your trip to new york</p>
+          <ul id="NyPack">
+            <li>2 Warm Wool or fleece had </li>
+            <li> Wool or cotton lined now boots, preferrably water proof </li>
+            <li> Jeans, warm pants </li>
+            <li> Two layered coats </li>
+            <li> three pairs of socks for every day your there. You don't want to pack one pair of socks
+              for each day and have wet socks or runout </li>
+            <li>Sweaters</li>
+            <li> Scarves </li>
+            <li> Gloves, wool or cotton, as air shouldn't get through </li>
+            <li> Warm Pajamas </li>
+            <li> cozy slippers </li>
+            <li> Undershirts </li>
+          </ul>
+        </section>
+		
+		<!-- Column 2 -->
+        <section class="col2">
+          <img class="img2" src="images/Chicag1.jpg" alt="A popular attraction"/>
+          <h2>Packing For Chicago</h2>
+          <p>The things you'll need to pack for chiago are quite similar to those you'd pack for New 
+            York, as both can become incredibly cold during the fall and winter months.</p>
+          <ul id="ChiPack">
+            <li>2 Warm Wool or fleece hat </li>
+            <li>Water proof wool or cotton lined snow boots.</li>
+            <li> warm pants </li>
+            <li> Two layered coats </li>
+            <li> Long socks </li>
+            <li> Sweaters</li>
+            <li> Scarves </li>
+            <li> Gloves, wool or cotton, as air shouldn't get through </li>
+            <li> Warm Pajamas </li>
+            <li> cozy slippers </li>
+            <li> Undershirts </li>
+            <li> An appetite, they have incredible pizza! </li>
+          </ul>
+        </section>
+		
+		<!-- Column 3 -->
+        <section class="col3">
+          <img class="img3" src="images/Hollywoodsign.jpg" alt="Cinnimon_Mocha"/>
+          <h2>What to pack for Los Angeles</h2>
+          <p>Unlike our two previous destination, The city of angels does not get bitter cold during the winter months. The best time to 
+            visit is during october, as the temperatures stay in the 60's and 70's, although there will be rain.
+            Here is what to pack for your trip to la!</p>
+          <ul id="LaPack">
+            <li> Dresses </li>
+            <li> Jeans </li>
+            <li> Leggings </li>
+            <li> Tank tops </li>
+            <li> Sneakers/tennis shoes </li>
+            <li> Tee shirts </li>
+            <li> Umbrellas! </li>
+            <li> Jacket for the evening </li>
+            <li> Sunscreen! You can still get a burn in the winter months! </li>
+          </ul>  
+        </section>
+      </div>
+	  <aside>
+          <h2>Why What you pack is important</h2>
+			<p>Being Prepared and knowing what to pack for your trip is Crucial to smooth sailing. If you pack summer clothes for a destination that is going to be slightly cold, you're more likely to buy new clothes, which can be expensive depending on where you are. Always make a plan of what to pack and check what the weather is like during the time your trip is going to take place.</p>
+          <h2> how's the weather over there?</h2>
+  			<p>Make sure you research the area you are visiting. Is it warm during the month you're going? Does it have swimming holes?
+            Should you pack extra money for a ticket to  local attractions? Make a check list of things you should know before you go!</p> 
+	  </aside>	
+	<footer>
+		<p>&copy;Rebecca Skibo CIS 130 101 <a href="mailto:rs0910088@otc.edu">&#9755;Email me: rs0910088@otc.edu</a> <a href="tel:417-999-999">&#9755; 417-999-999</a></p>
+    </footer>
+	  
+  </body>
+</html>
