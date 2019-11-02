@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+	<!-- 
+		Dev: Rebecca A. Skibo
+		File: index.html
+		Date: 10/09/19
+		assignment: Responsive Travel Site Midterm Project
+    semester: Fall 2019
+	-->
+	<title>Skibo Travel</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/reset.css" media="all" />
+	<link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/print.css" media="print" />
+  </head>
+  <body>
+  
+    <div class="container">
+	
+      <header>
+        <h1>Skibo Travel</h1>
+			<div class="navbar">
+			  <div class="dropdown">
+				  <button class="dropbtn" onclick="myFunction()">Packing For Your Trip
+					<i class="fa fa-caret-down"></i>
+				  </button>
+				  <div class="dropdown-content" id="dropdown">
+					<a href="packingtips.html"> What to pack for your trip </a>
+					<a href="https://www.nycgo.com/plan-your-trip/basic-information">About New York</a>
+					<a href="https://www.chicago.gov/city/en/about.html">About Chicago</a>
+					<a href="https://www.discoverlosangeles.com/media/facts-about-la">About Los Angeles</a>
+				  </div>
+			  </div>
+			  <a href="About.html"> About us</a>
+			  <a href="index.html">Home</a>
+			</div>
+			<div class="navbarBurger">
+              <i class="fas fa-bars fa-2x" onclick="myXFunction()"></i>
+              <div class="navbarBurger-content" id="navbarBurger" >
+                <a href="index.html">Home</a>
+			    <a href="https://www.nycgo.com/plan-your-trip/basic-information">About New York</a>
+					<a href="https://www.chicago.gov/city/en/about.html">About Chicago</a>
+					<a href="https://www.discoverlosangeles.com/media/facts-about-la">About Los Angeles</a>
+              </div>
+            </div>
+	
+			<script> /* These are dropdown menu settings/elements */
+				
+				function myFunction() {
+				  document.getElementById("dropdown").classList.toggle("show");
+				}
+
+				
+				window.onclick = function(e) {
+				  if (!e.target.matches('.dropbtn')) {
+				  var dropdown = document.getElementById("dropdown");
+					if (dropdown.classList.contains('show')) {
+					  dropdown.classList.remove('show');
+					}
+				  }
+				}
+				
+				
+				function myXFunction() {
+				  document.getElementById("navbarBurger").classList.toggle("showX");
+				}
+				
+				window.onclick = function(event){
+				  if(!event.target.matches('.fas fa-bars fa-2x')){
+					var dropdowns = document.getElementsById("navbarBurger");
+					var i;
+					for(i = 0; i < dropdowns.length; i++){
+						var openDropdown = dropdowns[i];
+						if(openDropdown.classList.contains('showX')){
+						  openDropdown.classList.remove('showX');
+						}
+					}
+				  }
+				}
+			</script>
+      </header>
+	  
+      <div class="cols clearfix">
+
+        <!-- Column 1 -->
+        <section id="col1">
+			<h3> Some tourists</h3>
+		  <figure>
+			    <img id="funtour" src="Images/Funtour.jpg">
+			   <figcaption> Some of our tourists in New York City having fun </figcaption>
+		  </figure>
+        </section>
+	</div>
+	<footer id="footer">
+		<p>&copy;Rebecca Skibo CIS 130 101 <a href="mailto:rs0910088@otc.edu">&#9755;</a> <a href="tel:417-999-999">&#9755; 417-999-999</a></p>
+	</footer>
+  </body>
+</html>
