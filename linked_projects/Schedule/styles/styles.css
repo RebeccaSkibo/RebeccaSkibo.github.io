@@ -1,4 +1,4 @@
-@charset "utf-8"
+
 /*
 		Date: 10/23/2019
 		Dev: Rebecca A. Skibo
@@ -8,11 +8,6 @@
 
 
 /* Structure code */
-
-html	{
-		background-image: images(background1.jpg);
-		
-}
 
 .schedule {
 		border-style: ridge;
