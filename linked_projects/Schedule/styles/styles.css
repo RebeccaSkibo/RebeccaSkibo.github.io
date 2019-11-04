@@ -1,4 +1,4 @@
-
+@charset "utf-8"
 /*
 		Date: 10/23/2019
 		Dev: Rebecca A. Skibo
@@ -9,16 +9,15 @@
 
 /* Structure code */
 
-
-body {
-	line-height: 1em;
-	background-color:rgb(140, 26, 255);
+html	{
+		background-image: images(background1.jpg);
+		
 }
+
 .schedule {
 		border-style: ridge;
 		text-align: center;
 		column-span: all;
-		
 }
 
 footer {
@@ -26,57 +25,36 @@ footer {
 		text-decoration: none;
 }
 
-.schedule caption {
-		font-size: 30px;
+#title {
 		text-align: center;
-		background-color: #FFEBCD;
+		background-color: eggshell;
 	
 }
 
 /* table styles */
-table.schedule {
-		background: #FFEBCD;
-		border: 10px ridge rgb(153, 0, 153);
-		font-size: 0.75em;
-		width: 100%;
-		border-collapse: separate;
-		border-spacing: 5px;
-		border-color: #e6ccff;
-}
-table.schedule th, table.schedule td {
-		border: 2px white;
-		font-size: 20px;
-		border-color: #e6ccff;
-}
+table {}
 .schedule {
 		border-style: ridge;
 		text-align: center;
-		color: #FFEBCD;
+		color: eggshell;
 		
 }
 
 .schedule table, tr, td, th {
-		padding: 80%;
+		padding: 80%
 		font-size: 20px;
-		text-align: center;
+		text-align: auto;
 		color: black;
-		border-color: #e6ccff;
+		background-color: grey;
 		outline-style: ridge;
 }
 
 
 .schedule th {
-		column-count: 6;
+		columns: 90% 6;
 
 		widows: 2;
 		orphans: 3;
 		
 }
-
-
-
-
-
-
-
 
