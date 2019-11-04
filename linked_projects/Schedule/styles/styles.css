@@ -9,10 +9,14 @@
 
 /* Structure code */
 
+body {
+	line-height: 1em;
+	background-color:rgb(140, 26, 255);
+}
 .schedule {
 		border-style: ridge;
 		text-align: center;
-		column-span: all;
+		column-span: 5;
 }
 
 footer {
@@ -27,7 +31,7 @@ footer {
 }
 
 /* table styles */
-table {}
+
 .schedule {
 		border-style: ridge;
 		text-align: center;
@@ -52,4 +56,21 @@ table {}
 		orphans: 3;
 		
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
