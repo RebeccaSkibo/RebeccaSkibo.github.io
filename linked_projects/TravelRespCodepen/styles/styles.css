@@ -16,7 +16,21 @@ body{
   height: 95%;
   
 }
-.container{
+#contentstart {
+		padding: 30px 15px 15px 25px;
+}
+
+#contactboxes {
+			padding: 30px 15px 15px 25px;
+			color: eggshell;
+}
+#addressBox {
+		padding: 20px 15px 15px 20px;
+}
+#contactInfo {
+		color: #e0b3ff;
+}
+.container, header{
   width:90%;
   margin:auto;
   max-width: 1200px;
@@ -255,3 +269,65 @@ figure figcaption {
        padding: 15px 0;
        text-align: center;
 }
+
+/* Form Styles */
+form#contactInfo > fieldset {
+	background-color: #b3e6ff;
+	border-radius: 20px;
+	-webkit-flex: 1 1 300px;
+	flex: 1 1 300px;
+	font-size: 1.5em;
+	padding: 15px;
+	margin: 15px;
+	color: blue;
+}
+div.formRow {
+		display: -webkit-flex;
+		display: flex;
+		
+		flex-flow: row wrap;
+		margin: 7px 0px;
+		
+}
+legend {
+		color: inherit;
+		padding: 20px;
+}
+
+/*info box styles */
+
+#zip {
+	padding: 10px;
+	margin: 10px;	
+}
+
+#firstname {
+	padding: 10px;
+	margin: 10px;	
+}
+
+#lastname {
+	padding: 10px;
+	margin: 10px;	
+}
+
+#phoneNum {
+	padding: 10px;
+	margin: 10px;	
+}
+
+#Email {
+	padding: 10px;
+	margin: 10px;	
+}
+#Destin {
+	padding: 10px;
+	margin: 10px;	
+}
+#lenStay {
+	padding: 10px;
+	margin: 10px;	
+}
+
+
+
