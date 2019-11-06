@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<!-- 
+		Dev: Rebecca A. Skibo
+		File: book.html
+		Date: 10/09/19
+		assignment: Responsive Travel Site Midterm Project
+  	semester: Fall 2019
+	-->
+	<title>Skibo Travel</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css" media="all" />
+	<link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/print.css" media="print" />
+
+	
+  </head>
+ <body>
+	  
+    
+	
+      <header>
+        <h1>Skibo Travel</h1>
+			<div class="navbar">
+			  <div class="dropdown">
+				  <button class="dropbtn" onclick="myFunction()">Packing For Your Trip
+					<i class="fa fa-caret-down"></i>
+				  </button>
+				  <div class="dropdown-content" id="dropdown">
+					<a href="packingtips.html"> What to pack for your trip </a>
+					<a href="https://www.nycgo.com/plan-your-trip/basic-information">About New York</a>
+					<a href="https://www.chicago.gov/city/en/about.html">About Chicago</a>
+					<a href="https://www.discoverlosangeles.com/media/facts-about-la">About Los Angeles</a>
+				  </div>
+        </div>
+			  <a href="about.html"> About us</a>
+			  <a href="index.html">Home</a>
+			  <a href="book.html"> Book Your Trip</a>
+			</div>
+			<div class="navbarBurger">
+              <i class="fas fa-bars fa-2x" onclick="myXFunction()"></i>
+              <div class="navbarBurger-content" id="navbarBurger" >
+                <a href="index.html">Home</a>
+			    <a href="https://www.nycgo.com/plan-your-trip/basic-information">About New York</a>
+					<a href="https://www.chicago.gov/city/en/about.html">About Chicago</a>
+					<a href="https://www.discoverlosangeles.com/media/facts-about-la">About Los Angeles</a>
+              </div>
+            </div>
+	
+			<script>
+				/* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+				function myFunction() {
+				  document.getElementById("dropdown").classList.toggle("show");
+				}
+
+				// Close the dropdown if the user clicks outside of it
+				window.onclick = function(e) {
+				  if (!e.target.matches('.dropbtn')) {
+				  var dropdown = document.getElementById("dropdown");
+					if (dropdown.classList.contains('show')) {
+					  dropdown.classList.remove('show');
+					}
+				  }
+				}
+				
+				/*Hamburger, toggle between hiding and showing the dropdown content*/
+				function myXFunction() {
+				  document.getElementById("navbarBurger").classList.toggle("showX");
+				}
+				
+				window.onclick = function(event){
+				  if(!event.target.matches('.fas fa-bars fa-2x')){
+					var dropdowns = document.getElementsById("navbarBurger");
+					var i;
+					for(i = 0; i < dropdowns.length; i++){
+						var openDropdown = dropdowns[i];
+						if(openDropdown.classList.contains('showX')){
+						  openDropdown.classList.remove('showX');
+						}
+					}
+				  }
+				}
+			</script>
+      </header>
+	<div class="container">
+	<div class="cols clearfix">
+	<h2> Book Your Trip </h2>
+	
+		<form id="contactInfo" onsubmit="return results ();" action="results2.html" method="post" target="_blank">
+			<script>
+						
+						var formData = location.search;
+						formData = formData.substring(1, formData.length);
+						while (formData.indexOf("+") !== -1) {
+						formData = formData.replace("+", " ");
+						}
+						formData = decodeURIComponent(formData);
+						var formArray = formData.split("&");
+						for (var i = 0; i < formArray.length; i = i + 1) {
+						document.write("<p>" + formArray[i] + "</p>");
+						}
+					</script>
+			<fieldset id="custInfo">
+				<legend>Contact Information</legend>
+				
+			<div class="formRow">
+				<label for="firstname">First Name*</label>
+				<input name="firstName" id="firstname" type="text" placeholder="enter your first name" required />
+				
+				<label for="lastname"> Last Name*</label>
+				<input name="lastname" id="lastname" type="text" placeholder="enter last name" required />
+			</div>
+			<div class="formRow">
+				
+				<input type="radio" name="gender" value="male" checked> Male<br>
+				<input type="radio" name="gender" value="female"> Female<br>
+				<input type="radio" name="gender" value="other"> Other
+			</div>
+			<div class="formRow">
+				<br>
+				<label for="phoneNum">Phone Number</label>
+				<input name="phoNum" id="phoneNum" type="tel" placeholder="Enter your phone number"required />
+			</div>
+			<div class="formRow">
+				<label for="Email">Email Address</label>
+				<input name="Email" id="Email" type="email" placeholder="Enter your email address"required />
+			</div>	
+			<div class="formRow">
+				<label for="Destin"> Destination</label>
+				 <select name="custDestin" id="Destin">
+					<option value="NewYork">New York,New York</option>
+					<option value="Illinois">Chicago,Illinois</option>
+					<option value="California" selected>Los Angeles,California</option>
+				</select>
+			</div>
+			
+			<div class="formRow">
+				<label for="zip"> Postal Code </label>
+				<input name="custZip" id="zip" type="text" placeholder="Your home zip code"required />
+			</div>
+			<div class="formRow">
+				<label for="lenStay"> How long are you staying?</label>
+					 from <input name="lenStay" id="lenStay" type="date">
+					 to <input name="lenStay" id="lenStay" type="date">
+			</div>
+			<div class="formRow">
+				<label for="book"> When Would you like to book?</label>
+				<input name="book" id="book" type="datetime-local"/>
+				
+			</div>
+			
+			<form id="submitButton"action="/results.html">
+				<fieldset id="submit">
+					<input type="submit"  value="Submit my Info"/>
+					
+				</fieldset>
+			</form>
+			</fieldset>
+		</form>
+	
+	<aside>
+		<footer><p>&copy;Rebecca Skibo CIS 130 101 <a href="mailto:rs0910088@otc.edu">&#9755;Email me: rs0910088@otc.edu</a> <a href="tel:417-999-999">&#9755; 417-999-999</a></p>
+	</footer>
+	</aside>
+	</div>
+	</div>	
+  </body>

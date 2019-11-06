@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<!-- 
+		Dev: Rebecca A. Skibo
+		File: results.html
+		Date: 10/30/19
+		assignment: Responsive Travel Site Midterm Project
+  	semester: Fall 2019
+	-->
+	<title>Skibo Travel</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="js/modernizr.custom.40753.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css" media="all" />
+	<link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/print.css" media="print" />
+		<script src="modernizr.custom.40753.js"></script>
+  </head>
+  
+  <body>
+	  
+    <div class="container">
+	
+      <header>
+        <h1>Skibo Travel</h1>
+			<div class="navbar">
+			  <div class="dropdown">
+				  <button class="dropbtn" onclick="myFunction()">Packing For Your Trip
+					<i class="fa fa-caret-down"></i>
+				  </button>
+				  <div class="dropdown-content" id="dropdown">
+					<a href="packingtips.html"> What to pack for your trip </a>
+					<a href="https://www.nycgo.com/plan-your-trip/basic-information">About New York</a>
+					<a href="https://www.chicago.gov/city/en/about.html">About Chicago</a>
+					<a href="https://www.discoverlosangeles.com/media/facts-about-la">About Los Angeles</a>
+				  </div>
+        </div>
+			  <a href="about.html"> About us</a>
+			  <a href="index.html">Home</a>
+			  <a href="book.html"> Book Your Trip</a>
+			</div>
+			<div class="navbarBurger">
+              <i class="fas fa-bars fa-2x" onclick="myXFunction()"></i>
+              <div class="navbarBurger-content" id="navbarBurger" >
+                <a href="index.html">Home</a>
+			    <a href="https://www.nycgo.com/plan-your-trip/basic-information">About New York</a>
+					<a href="https://www.chicago.gov/city/en/about.html">About Chicago</a>
+					<a href="https://www.discoverlosangeles.com/media/facts-about-la">About Los Angeles</a>
+              </div>
+            </div>
+	
+			<script>
+				/* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+				function myFunction() {
+				  document.getElementById("dropdown").classList.toggle("show");
+				}
+
+				// Close the dropdown if the user clicks outside of it
+				window.onclick = function(e) {
+				  if (!e.target.matches('.dropbtn')) {
+				  var dropdown = document.getElementById("dropdown");
+					if (dropdown.classList.contains('show')) {
+					  dropdown.classList.remove('show');
+					}
+				  }
+				}
+				
+				/*Hamburger, toggle between hiding and showing the dropdown content*/
+				function myXFunction() {
+				  document.getElementById("navbarBurger").classList.toggle("showX");
+				}
+				
+				window.onclick = function(event){
+				  if(!event.target.matches('.fas fa-bars fa-2x')){
+					var dropdowns = document.getElementsById("navbarBurger");
+					var i;
+					for(i = 0; i < dropdowns.length; i++){
+						var openDropdown = dropdowns[i];
+						if(openDropdown.classList.contains('showX')){
+						  openDropdown.classList.remove('showX');
+						}
+					}
+				  }
+				}
+			</script>
+      </header>
+	<article id="custInfo">
+			<div class="container">
+				<h2>Your form is submitted</h2>
+				<div class="results">
+					<legend>Your Information:</legend>
+					<script>
+						function results() {
+						var firstname= document.getElementById('firstname').value;
+						var lastname= document.getElementById('lastname').value;
+						var Email= document.getElementById('Email').value;
+						var phoneNum= document.getElementById('phoneNum');
+						var Destin= document.getElementById('Destin').value;
+						var zip= document.getElementById('zip').value;
+						var book= document.getElementById('book').value;
+						var lenStay= document.getElementById('lenStay').
+						
+						document.write(firstname + "<br/>");
+						document.write(laststname + "<br/>");
+						document.write(Email + "<br/>");
+						document.write(phoneNum + "<br/>");
+						document.write(Destin + "<br/>");
+						document.write(zip + "<br/>");
+						document.write(book + "<br/>");
+						document.write(lenStay + "<br/>");
+						}
+						
+						document.write("<h2> Thank You!</h2>")
+						document.write("<h3> Here is you Info:</h3>");
+						var formData = location.search;
+						formData = formData.substring(1, formData.length);
+						while (formData.indexOf("+") !== -1) {
+						formData = formData.replace("+", " ");
+						}
+						formData = decodeURIComponent(formData);
+						var formArray = formData.split("&");
+						for (var i = 0; i < formArray.length; i = i + 1) {
+						document.write("<p>" + formArray[i] + "</p>");
+						}
+					</script>
+				<div class="formRow">
+					<label for="firstname">First Name*</label>
+					<label for="lastname"> Last Name*</label>
+					<label for="phoneNum">Phone Number</label>
+					<label for="phoneNum">Phone Number</label>
+					<label for="Email">Email Address</label>
+					<label for="Destin"> Destination</label>
+					<label for="zip"> Postal Code </label>
+					
+				</div>
+				
+			</div>
+		</article>
+	<aside>
+		<footer><p>&copy;Rebecca Skibo CIS 130 101 <a href="mailto:rs0910088@otc.edu">&#9755;Email me: rs0910088@otc.edu</a> <a href="tel:417-999-999">&#9755; 417-999-999</a></p>
+	</footer>
+	</aside>
+	</div>
+	</div>	
+  </body>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
