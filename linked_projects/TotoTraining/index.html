@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<!-- 
+		Dev: Rebecca A. Skibo
+		File: index.html
+		Date: 11/15/19
+		assignment: Toto's Training Tutorials
+  	semester: Fall 2019
+	-->
+	<title> Toto's Training Tutorials </title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css" media="all" />
+	<link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/print.css" media="print" />
+	
+  </head>
+  <body>
+  
+    
+	
+      <header>
+        <h1>Toto's Training Tutorials</h1>
+			<div class="navbar">
+			  <div class="dropdown">
+				  <button class="dropbtn" onclick="myFunction()"> Click Me
+					<i class="fa fa-caret-down"></i>
+				  </button>
+				  <div class="dropdown-content" id="dropdown">
+					<a href="tutorials.html"> Tutorials </a>
+					<a href="index.html">Home</a>
+					<a href="https://www.youtube.com/watch?v=HYdTjWFxGTE" > Original Between Video </a>
+				  </div>
+        </div>
+			  <a href="tutorials.html"> Tutorial Videos</a>
+			  <a href="index.html">Home</a>
+			  
+			</div>
+			<div class="navbarBurger">
+              <i class="fas fa-bars fa-2x" onclick="myXFunction()"></i>
+              <div class="navbarBurger-content" id="navbarBurger" >
+                <a href="index.html">Home</a>
+			    <a href="https://www.nycgo.com/plan-your-trip/basic-information">Tutorial Videos</a>
+				
+					
+              </div>
+            </div>
+	
+			<script>
+				/* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+				function myFunction() {
+				  document.getElementById("dropdown").classList.toggle("show");
+				}
+
+				// Close the dropdown if the user clicks outside of it
+				window.onclick = function(e) {
+				  if (!e.target.matches('.dropbtn')) {
+				  var dropdown = document.getElementById("dropdown");
+					if (dropdown.classList.contains('show')) {
+					  dropdown.classList.remove('show');
+					}
+				  }
+				}
+				
+				/*Hamburger, toggle between hiding and showing the dropdown content*/
+				function myXFunction() {
+				  document.getElementById("navbarBurger").classList.toggle("showX");
+				}
+				
+				window.onclick = function(event){
+				  if(!event.target.matches('.fas fa-bars fa-2x')){
+					var dropdowns = document.getElementsById("navbarBurger");
+					var i;
+					for(i = 0; i < dropdowns.length; i++){
+						var openDropdown = dropdowns[i];
+						if(openDropdown.classList.contains('showX')){
+						  openDropdown.classList.remove('showX');
+						}
+					}
+				  }
+				}
+			</script>
+      </header>
+	<div class="container">
+      <div class="cols clearfix">
+
+        
+        <section class="col1">
+          
+          <h2> Welcome to Toto's Training Tutorials</h2>
+          <p> hello and welcome to Toto's training Tutorials website,
+			where we provide tutorials for training your pet. You will find training videos and links to help you on your journey.
+			Our videos are on our <a href="tutorials.html" >tutorials </a> page. </p>
+        </section>
+		
+		
+      
+      </div>
+
+	  
+	  
+    </div>
+	<footer>
+		<p>&copy;Rebecca Skibo CIS 130 101 <a href="mailto:rs0910088@otc.edu">;Email me: rs0910088@otc.edu</a> <a href="tel:417-999-999">; 417-999-999</a></p>
+	</footer>
+  </body>
+</html>
