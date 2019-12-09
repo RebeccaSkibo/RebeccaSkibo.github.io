@@ -14,7 +14,7 @@ body{
   box-sizing: border-box;
   width:95%;
   height: 95%;
-  
+  background: linear-gradient(to bottom, #cc0099 0%, #6699ff 100%);
 }
 
 .container, header{
@@ -22,7 +22,7 @@ body{
   margin:auto;
   max-width: 1200px;
   background-color: #bb99ff;
-  
+  background: linear-gradient(to bottom, #9999ff 0%, #ff66cc 100%);
 }
 .clearfix:after {
 	content: "";
@@ -39,6 +39,7 @@ header h1 {
 	padding: 90px 55px 70px 35px;
 	margin-bottom: 0px;
 	font-size: 4em;
+	text-shadow: blue 4px 4px 9px;
 }
 
 /*Nav Styles*/
@@ -55,7 +56,7 @@ header h1 {
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
-  border: white inset double;
+	border-style:  inset double;
   
 }
 .dropdown {
@@ -108,18 +109,18 @@ header h1 {
 .cols {
   padding: 50px 10px 5px 10px;
   line-height: 1.5;
-  border: 2px ridge violet;
+  border: 5px ridge violet;
 }
 .col1 {
 
   float:left;
   width:30%;
   margin-right:5%;
+  border-width: 10px 10px 10px 15px;
 }
 
-img {
-  width: 100%;
-  margin: 0 0 10px 0;
+#welcome {
+		border-style: ridge groove;
 }
 
 
@@ -130,25 +131,26 @@ footer {
 	display: block;
 	flex-direction: column;
 	flex-wrap: wrap;
-	color: blue;
+	color: black;
+	text-align: center;
+	text-shadow: blue 4px 4px 9px;
 }
 footer p {
 	padding-top: 15px;
 }
-footer a{
-	color: blue;
-}
+
 
 /* Responsive Styles: Big to Small*/
 @media screen and (max-width: 850px) {
 	header h1 {
 		font-size: 3em;
+		
 	}
 
 	.col1 {
 		float: left;
 		width: 45%;
-
+		border-style: double ridge;
 }
 
 @media screen and (max-width: 580px){
@@ -197,6 +199,7 @@ footer a{
 	
 	.col1 {
 		width: 95%;
+		text-align: center;
 	}
 
 
@@ -221,5 +224,6 @@ video {
     margin-bottom: 5px;
     margin-left: auto;
     margin-right: auto;
-		}   
+	 border: 5px ridge violet;
+	}   
   
