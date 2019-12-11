@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Railroad Historical Museum </title>
+	
+	<!--
+		Date: 12/04/2019
+		Name: Rebecca A Skibo
+		
+		file: reserve.html
+	-->
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles/reset.css" media="all" />
+    <link rel="stylesheet" href="styles/print.css" media="print" />
+	<link rel="stylesheet" href="styles/styles.css" />
+	<script src="Javascript/swap.js" defer></script>	<!-- The link to the Javascript code for the Ad/Images -->	
+</head>	
+
+<body>
+	<header>
+		<div class="navbar">
+				  <div class="dropdown">
+					  <button class="dropbtn" onclick="myFunction()"> Click Me
+						<i class="fa fa-caret-down"></i>
+					  </button>
+					  <div class="dropdown-content" id="dropdown">
+						<a href="reserve.html">Admission</a>
+						<a href="Index.html">Home</a>
+						
+					  </div>
+			</div>
+				  <a href="http://www.musgravefoundation.org/"> Musgrave Foundation</a>
+				  <a href="Index.html">Home</a>
+				  
+				</div>
+				<div class="navbarBurger">
+				  <i class="fas fa-bars fa-2x" onclick="myXFunction()"></i>
+				  <div class="navbarBurger-content" id="navbarBurger" >
+					<a href="Index.html">Home</a>
+					<a href="reserve.html">Admission</a>
+					<a href="http://www.musgravefoundation.org/"> Musgrave Foundation</a>
+						
+				  </div>
+				</div>
+		
+				<script> <!-- Do not remove! creates the responsive part of the nav bar -->
+					/* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+					function myFunction() {
+					  document.getElementById("dropdown").classList.toggle("show");
+					}
+
+					// Close the dropdown if the user clicks outside of it
+					window.onclick = function(e) {
+					  if (!e.target.matches('.dropbtn')) {
+					  var dropdown = document.getElementById("dropdown");
+						if (dropdown.classList.contains('show')) {
+						  dropdown.classList.remove('show');
+						}
+					  }
+					}
+					
+					/*Hamburger, toggle between hiding and showing the dropdown content*/
+					function myXFunction() {
+					  document.getElementById("navbarBurger").classList.toggle("showX");
+					}
+					
+					window.onclick = function(event){
+					  if(!event.target.matches('.fas fa-bars fa-2x')){
+						var dropdowns = document.getElementsById("navbarBurger");
+						var i;
+						for(i = 0; i < dropdowns.length; i++){
+							var openDropdown = dropdowns[i];
+							if(openDropdown.classList.contains('showX')){
+							  openDropdown.classList.remove('showX');
+							}
+						}
+					  }
+					}
+				</script>
+      </header>
+	<div class="container">
+      <div class="cols clearfix">
+
+        
+        
+	<h1> Railroad Historical Museum INC of Springfield Missouri </h1>
+	
+		<h2> Welcome to the Railroad Historical museum Inc. of Springfield Missouri </h2>
+			<p>	We are a nonprofit museum dedicated to the preservation of Railroad History and the heritage of the past, educating present and future generations.
+				Our museum is located in the St. Louis San-Francisco Locomotive No.4524, Burlington Baggage Car,
+				Chicago and Northwestern Commuter Car and Burlington Northern Caboose, as well as the new Max Jahn Depot.
+				The depot is a replica of an 1890s-era rural depot, based on the original prints from the depot at Elsinore, MO.
+				We have artifacts, equipment, photos, paintings and much more from the St. Louis San-Francisco Railroad and other Railroads.
+				There are many hands-on activities for visitors of all ages. We also have videos of  Steam and Diesel Trains, and a Model Train Layout. 
+				You are welcome to explore the Frisco Locomotive 4524, Commuter Car, Caboose, and the depot.
+				We are in Grant Beach Park with access to a public pool, playground and picnic area. We are also on City Utilities Bus Route.
+				The staff at the museum are volunteers, many of whom have a connection to the railroad industry and can answer your questions.
+				</p>
+	</div>
+	<aside class="add" >
+		<p>
+		<img src=" " id="pic" alt="Addvertisement box" />
+
+		</p>
+	</aside>
+	
+	
+	</div>
+<div class="footer">
+		
+			<a href="mailto:railroadhistoricalmuseum@yahoo.com"> rrhistoricalmuseum@zoomshare.com</a>
+			<a href="tel:417-833-0994"> 417-833-0994 </a>
+			<a href="https://www.google.com/maps/place/Grant+Beach+Park/@37.2236619,-93.3006909,18z/data=!3m1!4b1!4m2!3m1!1s0x87cf6258db9a9c29:0xc2a08b750f2e4fca"> 1300 N Grant Ave, Springfield, MO 65802</a> 
+	</div>
+</body>
+</html>
