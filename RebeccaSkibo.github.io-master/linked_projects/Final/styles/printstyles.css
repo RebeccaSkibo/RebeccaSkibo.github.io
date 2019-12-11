@@ -1,0 +1,25 @@
+/*
+	CIS 130-101, Exam 2
+	Date: 11.12.19
+	Filename: 
+	
+	Reviewer:
+	Author: Bec Braughton
+*/
+
+/* PRINT STYLES */
+@media print {
+   body, h2, article {
+      color: rgb(0,0,0);
+      background: rgb(255,255,255);
+   }
+   body {
+      max-width: 100%;
+   }
+   nav {
+      display: none;
+   }
+}
+@page {
+   margin: 0.75in;
+}

@@ -1,0 +1,80 @@
+
+/*
+		Date: 11/03/2019
+		Dev: Rebecca A. Skibo
+		file: styles.css
+		assignment: Schedule
+*/
+
+
+/* Structure code */
+
+body {
+	line-height: 1em;
+	background-color:rgb(140, 26, 255);
+}
+.schedule {
+		border-style: ridge;
+		text-align: center;
+		column-span: 5;
+}
+
+footer {
+		text-align: center;
+		text-decoration: none;
+}
+
+#title {
+		text-align: center;
+		background-color: eggshell;
+	
+}
+
+/* table styles */
+
+.schedule {
+		border-style: ridge;
+		text-align: center;
+		color: eggshell;
+		
+}
+
+.schedule table, tr, td, th {
+		padding: 80%
+		font-size: 20px;
+		text-align: auto;
+		color: black;
+		background-color: grey;
+		outline-style: ridge;
+}
+
+
+.schedule th {
+		columns: 90% 6;
+
+		widows: 2;
+		orphans: 3;
+		
+}
+
+table {
+	margin: auto;
+	padding: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

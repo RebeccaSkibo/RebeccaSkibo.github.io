@@ -1,0 +1,37 @@
+/*
+	CIS 130-101, Exam 2
+	Date: 11.12.19
+	Filename: 
+	
+	Reviewer:
+	Author: Bec Braughton
+*/
+
+/* RESET STYLES */
+html {
+	color: white;
+	padding: 20px 50px 20px 50px;
+}
+a, article, body, div, figcaption, figure, footer, header, h1, 
+h2, h3, img, nav, p, ol, li, ul, dl, dt, dd {
+   /*reset border, padding and margin here*/
+}
+img {
+   max-width: 100%;
+   height: auto;
+   width: auto;
+}
+ol, ul {
+	list-style-type: none;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+
+
+
+
+
+
